@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>simple and compound calculator</title>
+    <script src="si.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body{
+            background-color:rgba(240, 128, 128, 0.233);
+        }
+        .container{
+             background-color: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+  <h1 class="text-center">SIMPLE AND COMPOUND INTEREST CALCULATOR</h1>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-4 mt-3">
+                <div class="button-container d-flex justify-content-evenly">
+                    <button onclick="simple()" type="button" class="btn btn-light">Simple Interest</button>
+                    <button onclick="compound()" type="button" class="btn btn-light">Compound Interest</button>
+                </div>
+        <div id="sim_int_fields">
+            <form>
+                <div class="mt-3 mb-3">
+                    <label for="principal" class="form-label">Principal</label>
+                    <input type="number" value="" id="principal" class="form-control"
+                    name="principal" placeholder="enter a principal amount">
+                </div>
+                <div class="mb-3">
+                    <label for="rate" class="form-label">Rate</label>
+                    <input type="number" value="" id="rate" class="form-control" placeholder="enter a interest rate"
+                    name="rate">
+                </div>
+                <div class="mb-3">
+                    <label for="year" class="form-label">Year</label>
+                    <input type="number" value="" id="year" class="form-control" placeholder="enter a year"
+                        name="year">
+                </div> 
+                <div class="text-center mb-3">
+                        <button onclick="sim_calculate()" type="button" class="btn btn-info">Calculate</button>
+                </div>
+            </form>
+        </div>
+        <div id="com_int_fields" style="display:none;">
+            <form>
+                <div class="mt-3 mb-3">
+                    <label for="principal" class="form-label">Principal Amount</label>
+                    <input for="principal" type="number" value="" id="principal" class="form-control"
+                    name="principal" placeholder="enter a principal amount">
+                </div>
+                <div class="mb-3">
+                    <label for="rate" class="form-label">Annual Interest Rate</label>
+                    <input type="number" value="" id="rate" class="form-control" placeholder="enter a interest rate"
+                    name="rate">
+                </div>
+                <div class="mb-3">
+                    <label for="year" class="form-label">Time Period</label>
+                    <input type="number" value="" id="year" class="form-control" placeholder="enter a year"
+                        name="year">
+                </div> 
+                <div class="text-center mb-3">
+                        <button onclick="com_calculate()" type="button" class="btn btn-info">Calculate</button>
+                </div>
+            </form>
+        </div>
+            <div id="result" style="display: none;" class="text-center">
+                <h4 id="sim"></h4>
+                <h4 id="com"></h4>
+            </div>
+        </div>      
+    </div>
+</div>
+</body>
+</html>
